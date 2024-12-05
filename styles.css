@@ -9,6 +9,7 @@ body, html {
 body {
   background: url('images/robot.jpg') no-repeat center center fixed;
   background-size: cover;
+  font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -97,4 +98,52 @@ header nav ul li a {
   background-color: #00f;
   color: #fff;
   cursor: pointer;
+}
+
+#footer {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+#main-header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Медиазапросы для адаптивности */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero {
+    font-size: 1.2em;
+  }
+
+  .services {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .service {
+    margin-bottom: 20px;
+  }
+
+  .ul {
+    margin: 10px 0;
+  }
+  
+  .table-section table {
+    font-size: 0.8em;
+  }
+
+  .contact-form {
+    padding: 10px;
+  }
 }
