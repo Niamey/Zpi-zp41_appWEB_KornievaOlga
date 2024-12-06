@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Partnerio</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
- 
 </head>
+
 <body>
-  <header id="main-header">
+
+  <header id="main-header3">
     <nav>
       <ul>
         <li><a href="#company">Company</a></li>
@@ -20,97 +22,104 @@
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <h1>AI PARTNERIO</h1>
-      <p>Your Partner in the AI World!</p>
-      <p>The Future is AI. We Help You Navigate It.</p>
-      <p><a href="https://en.wikipedia.org/wiki/Artificial_intelligence" target="_blank" class="domain-link">Learn more about Artificial Intelligence</a></p>
-    </section>
-
-    <section class="services">
-      <div class="service">
-        <h2>AI Assistants Development</h2>
-        <a href="#">Learn more</a>
-      </div>
-      <div class="service">
-        <h2>ChatGPT on Your Data</h2>
-        <a href="#">Learn more</a>
-      </div>
-      <div class="service">
-        <h2>Document Intelligence</h2>
-        <a href="#">Learn more</a>
-      </div>
-      <div class="service">
-        <h2>All Services</h2>
-        <a href="#">Learn more</a>
-      </div>
-    </section>
-
-    <section class="additional-info">
-      <h2>Why Choose Us</h2>
-      <ul class="ul">
-        <li>Innovative Solutions</li>
-        <li>Experienced Team</li>
-        <li>Customer-Centric Approach</li>
+  <div class="container">
+    <div class="left-menu">
+      <ul>
+        <li><a href="#" onclick="showInfo('why-to-choose')">Why to Choose Us?</a></li>
+        <li><a href="#" onclick="showInfo('our-achievements')">Our Achievements</a></li>
       </ul>
+    </div>
 
-      <ol class="ul">
-        <li>Step 1: Define your goals</li>
-        <li>Step 2: Collaborate with our experts</li>
-        <li>Step 3: Implement AI solutions</li>
-      </ol>
-    </section>
+    <div class="content">
+      <section class="hero">
+        <h1 class="fade-in">AI PARTNERIO</h1>
+        <p class="fade-in">Your Partner in the AI World!</p>
+        <p class="fade-in">The Future is AI. We Help You Navigate It.</p>
+        <p><a href="https://en.wikipedia.org/wiki/Artificial_intelligence" target="_blank"
+            class="domain-link fade-in">Learn more about Artificial Intelligence</a></p>
+      </section>
 
-    <section class="table-section">
-      <h2>Our Achievements</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Year</th>
-            <th>Milestone</th>
-            <th>Impact</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>2021</td>
-            <td>Launched AI Assistant Services</td>
-            <td>Empowered 500+ businesses</td>
-          </tr>
-          <tr>
-            <td>2022</td>
-            <td>Introduced Document Intelligence</td>
-            <td>Streamlined workflows</td>
-          </tr>
-          <tr>
-            <td>2023</td>
-            <td>Expanded Global Reach</td>
-            <td>Served clients in 30+ countries</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+      <div id="why-to-choose" class="additional-info" style="display:none;">
+        <h2>Why Choose Us</h2>
+        <ul>
+          <li>Innovative Solutions</li>
+          <li>Experienced Team</li>
+          <li>Customer-Centric Approach</li>
+        </ul>
+      </div>
 
-    <section class="contact-form">
-      <h2>Contact Us</h2>
-      <form action="/submit" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+      <div id="our-achievements" class="table-section" style="display:none;">
+        <h2>Our Achievements</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Milestone</th>
+              <th>Impact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2021</td>
+              <td>Launched AI Assistant Services</td>
+              <td>Empowered 500+ businesses</td>
+            </tr>
+            <tr>
+              <td>2022</td>
+              <td>Introduced Document Intelligence</td>
+              <td>Streamlined workflows</td>
+            </tr>
+            <tr>
+              <td>2023</td>
+              <td>Expanded Global Reach</td>
+              <td>Served clients in 30+ countries</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+  <script>
+    function showInfo(section) {
+      // Получаем элемент секции
+      const sectionElement = document.getElementById(section);
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
+      // Проверяем, если нужная секция уже отображается
+      const isVisible = sectionElement.style.display === 'block';
 
-        <button type="submit">Send</button>
-      </form>
-    </section>
-  </main>
+      // Скрываем все секции
+      document.getElementById('why-to-choose').style.display = 'none';
+      document.getElementById('our-achievements').style.display = 'none';
 
+      // Если секция не была видна, показываем ее
+      if (!isVisible) {
+        sectionElement.style.display = 'block';
+      }
+    }
+  </script>
+  <section class="services">
+    <div class="service">
+      <h2>AI Assistants Development</h2>
+      <a href="#">Learn more</a>
+    </div>
+    <div class="service">
+      <h2>ChatGPT on Your Data</h2>
+      <a href="#">Learn more</a>
+    </div>
+    <div class="service">
+      <h2>Document Intelligence</h2>
+      <a href="#">Learn more</a>
+    </div>
+    <div class="service">
+      <h2>All Services</h2>
+      <a href="#">Learn more</a>
+    </div>
+  </section>
   <footer id="footer">
     <p>&copy; 2024 AI Partnerio. All rights reserved.</p>
   </footer>
+
 </body>
+
 </html>
