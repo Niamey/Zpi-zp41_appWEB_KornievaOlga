@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +7,8 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
-  <header id="main-header3">
+  <header id="main-header">
     <nav>
       <ul>
         <li><a href="#company">Company</a></li>
@@ -37,8 +34,6 @@
         <p class="fade-in">The Future is AI. We Help You Navigate It.</p>
         <p><a href="https://en.wikipedia.org/wiki/Artificial_intelligence" target="_blank" class="domain-link fade-in">Learn more about Artificial Intelligence</a></p>
       </section>
-    </div>
-    
 
       <div id="why-to-choose" class="additional-info" style="display:none;">
         <h2>Why Choose Us</h2>
@@ -81,24 +76,6 @@
     </div>
   </div>
 
-  <script>
-    function showInfo(section) {
-      // Получаем элемент секции
-      const sectionElement = document.getElementById(section);
-
-      // Проверяем, если нужная секция уже отображается
-      const isVisible = sectionElement.style.display === 'block';
-
-      // Скрываем все секции
-      document.getElementById('why-to-choose').style.display = 'none';
-      document.getElementById('our-achievements').style.display = 'none';
-
-      // Если секция не была видна, показываем ее
-      if (!isVisible) {
-        sectionElement.style.display = 'block';
-      }
-    }
-  </script>
   <section class="services">
     <div class="service">
       <h2>AI Assistants Development</h2>
@@ -117,10 +94,22 @@
       <a href="#">Learn more</a>
     </div>
   </section>
+
   <footer id="footer">
     <p>&copy; 2024 AI Partnerio. All rights reserved.</p>
   </footer>
 
-</body>
+  <script>
+    function showInfo(section) {
+      const sectionElement = document.getElementById(section);
+      const isVisible = sectionElement.style.display === 'block';
+      document.getElementById('why-to-choose').style.display = 'none';
+      document.getElementById('our-achievements').style.display = 'none';
 
+      if (!isVisible) {
+        sectionElement.style.display = 'block';
+      }
+    }
+  </script>
+</body>
 </html>
