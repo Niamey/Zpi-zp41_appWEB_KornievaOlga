@@ -190,4 +190,16 @@ header nav ul li a {
 .hero .domain-link:hover {
   text-decoration: underline;
 }
- 
+ /* Анимация появления */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Стили для анимации и закругления углов */
+.fade-in {
+  animation: fadeIn 2s ease-in;
+  border-radius: 10px; /* Закругление углов */
+  padding: 10px; /* Добавляем отступы, чтобы закругленные углы были видны */
+  background: rgba(0, 0, 0, 0.1); /* Легкий фон для наглядности закругленных углов */
+}
