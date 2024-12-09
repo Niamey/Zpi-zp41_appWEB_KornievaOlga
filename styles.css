@@ -206,6 +206,67 @@ header nav ul li a {
   padding: 10px; /* Добавляем отступы, чтобы закругленные углы были видны */
   background: rgba(0, 0, 0, 0.1); /* Легкий фон для наглядности закругленных углов */
 }
+
+.contact-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.contact-form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-form label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #555;
+  display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contact-form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact-form button:hover {
+  background-color: #45a049;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+
+
 /* Медіазапити для адаптивності */
 @media (max-width: 768px) {
   header nav ul {
@@ -239,3 +300,4 @@ header nav ul li a {
     padding: 10px;
   }
 }
+ 

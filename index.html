@@ -24,6 +24,7 @@
       <ul>
         <li><a href="#" onclick="showInfo('why-to-choose')">Why to Choose Us?</a></li>
         <li><a href="#" onclick="showInfo('our-achievements')">Our Achievements</a></li>
+        <li><a href="#" onclick="showInfo('contact-form')">Contact Us</a></li> <!-- Contact Us button -->
       </ul>
     </div>
 
@@ -73,6 +74,23 @@
           </tbody>
         </table>
       </div>
+
+      <!-- Contact Form Section -->
+      <div id="contact-form" class="contact-form" style="display:none;">
+        <h2>Contact Us</h2>
+        <form action="/submit" method="POST">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit">Send</button>
+        </form>
+      </div>
     </div>
   </div>
 
@@ -103,9 +121,13 @@
     function showInfo(section) {
       const sectionElement = document.getElementById(section);
       const isVisible = sectionElement.style.display === 'block';
+      
+      // Hide all sections first
       document.getElementById('why-to-choose').style.display = 'none';
       document.getElementById('our-achievements').style.display = 'none';
+      document.getElementById('contact-form').style.display = 'none';
 
+      // Show the clicked section
       if (!isVisible) {
         sectionElement.style.display = 'block';
       }
