@@ -13,7 +13,7 @@
   
   #main-header-2  {
     background: rgba(0, 0, 0, 0.6);
-    padding: 10px 20px;
+    padding: 10px 10px;
   }
   header > nav {
     margin-top: 10px;
@@ -94,7 +94,7 @@
   
   /* Стили для каждого блока с историей */
   .story {
-    width: 30%;                /* Задаем ширину каждого блока 30%, чтобы они располагались втроем */
+    width: 30%;  
     text-align: center;        /* Выравнивание текста по центру */
     margin: 10px 0;            /* Отступы сверху и снизу */
   }
@@ -102,7 +102,51 @@
   /* Стили для видео, чтобы они не выходили за пределы блока */
   .story video {
     width: 100%;               /* Видео растягивается на всю ширину блока */
-    height: auto;              /* Высота видео автоматически пропорциональна ширине */
+    height: 400px;              /* Высота видео автоматически пропорциональна ширине */
+  }
+  /* FAQ Section */
+#faq {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+  }
+  
+  #faq h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .faq-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .faq-item {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    flex: 1 1 calc(33% - 40px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+  }
+  
+  .faq-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .faq-item h3 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .faq-item p {
+    font-size: 14px;
+    line-height: 1.5;
   }
   
   /* Мобильный режим */
