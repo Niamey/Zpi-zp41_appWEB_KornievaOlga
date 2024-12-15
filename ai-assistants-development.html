@@ -6,6 +6,13 @@
   <title>AI Assistants Development</title>
   <link rel="stylesheet" href="styles-ai-development-assiastance.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script>
+ 
+    function toggleBenefitsSection() {
+      const section = document.getElementById('flexible-table-section');
+      section.style.display = section.style.display === 'none' || section.style.display === '' ? 'block' : 'none';
+    }
+  </script>
 </head>
 <body>
   <!-- Header -->
@@ -14,7 +21,7 @@
       <ul>
         <li><a href="#about-ai">About AI</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#benefits">Benefits</a></li>  
+        <li><a href="#benefits" id="show-benefits" onclick="toggleBenefitsSection()">Benefits</a></li>  
          <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact">Ask  Us</a></li>
       </ul>
@@ -46,6 +53,7 @@
       </div>
     </div>
   </section>
+  
 
 <!-- Success Stories -->
 <section id="success-stories">  
@@ -114,7 +122,31 @@
       <button type="submit">Send</button>
     </form>
   </section>
-
+  <section id="flexible-table-section" style="background-color: #f9f9f9; padding: 40px;">
+    <h2 style="text-align: center;"> Переваги Співпраці з AI Partnerio</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+      <div style="text-align: center; padding: 20px; border: 1px solid #ccc; background-color: #fff;">
+        <h3>Інноваційні Рішення</h3>
+        <p>Ми використовуємо найсучасніші досягнення в галузі штучного інтелекту для створення рішень, що не тільки відповідають сучасним вимогам, а й випереджають їх.</p>
+      </div>
+      <div style="text-align: center; padding: 20px; border: 1px solid #ccc; background-color: #fff;">
+        <h3>Зменшення Витрат</h3>
+        <p>Використання технологій штучного інтелекту дозволяє автоматизувати численні процеси, що призводить до значної економії часу та коштів.</p>
+      </div>
+      <div style="text-align: center; padding: 20px; border: 1px solid #ccc; background-color: #fff;">
+        <h3>Персоналізація</h3>
+        <p>Наші AI-рішення здатні адаптуватися до індивідуальних потреб вашого бізнесу, підвищуючи рівень залучення користувачів та покращуючи їхній досвід.</p>
+      </div>
+      <div style="text-align: center; padding: 20px; border: 1px solid #ccc; background-color: #fff;">
+        <h3>Гнучкість та Масштабованість</h3>
+        <p>Наші рішення можуть масштабуватися в залежності від потреб вашого бізнесу, забезпечуючи адаптивність та ефективність на будь-якому етапі розвитку компанії.</p>
+      </div>
+      <div style="text-align: center; padding: 20px; border: 1px solid #ccc; background-color: #fff;">
+        <h3>Безперервна Підтримка</h3>
+        <p>Наша команда фахівців завжди готова надати підтримку в процесі впровадження та експлуатації наших рішень, забезпечуючи максимальну ефективність на кожному етапі.</p>
+      </div>    
+    </div>
+  </section>
   <footer id="footer-2">
     <p>&copy; 2024 AI Partnerio. All rights reserved.</p>
   </footer>
