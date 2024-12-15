@@ -149,25 +149,87 @@
     line-height: 1.5;
   }
   
-  /* Мобильный режим */
-  @media (max-width: 768px) {
-    .header {
+ /* Медиазапит  для моб   */
+@media (max-width: 768px) {
+  .header {
       flex-direction: column;
       align-items: center;
-    }
-    
-    .nav {
+  }
+
+  .nav {
       flex-direction: column;
       gap: 20px;
-    }
-  
-    .nav-list {
+  }
+
+  .nav-list {
       flex-direction: column;
       gap: 15px;
-    }
-  
-    .nav-list li a {
-      font-size: 1rem;
-    }
   }
-  
+
+  .nav-list li a {
+      font-size: 1rem;
+  }
+
+  .faq-item {
+      flex: 1 1 calc(100% - 40px);
+  }
+
+  .story {
+      width: 100%;
+      margin: 10px 0;
+  }
+
+  .video-container {
+      padding: 10px;
+  }
+}
+
+/* Медиазапит для планшетів  */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  .nav {
+      flex-direction: row;
+      gap: 30px;
+  }
+
+  .nav-list {
+      flex-direction: row;
+      gap: 25px;
+  }
+
+  .faq-item {
+      flex: 1 1 calc(50% - 40px);
+  }
+
+  .story {
+      width: 45%;
+  }
+}
+
+/* Медиазапип для десктопов  */
+@media (min-width: 1024px) {
+  .header {
+      flex-direction: row;
+  }
+
+  .nav-list {
+      flex-direction: row;
+      gap: 50px;
+  }
+
+  .faq-item {
+      flex: 1 1 calc(25% - 40px);
+  }
+
+  .story {
+      width: 25%;
+  }
+
+  .video-container {
+      padding: 30px;
+  }
+}
