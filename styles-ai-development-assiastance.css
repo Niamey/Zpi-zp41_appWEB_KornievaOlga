@@ -11,14 +11,22 @@
     background-color: #f4f4f4;
   }
   
-  #main-header-2  {
+  #main-header-2 {
     background: rgba(0, 0, 0, 0.6);
-    padding: 10px 10px;
-  }
-  header > nav {
+    padding: 10px;
+    box-sizing: border-box; /* Забезпечує правильний розрахунок розмірів */
+    overflow: hidden; /* Якщо текст виходить, його можна приховати */
+    white-space: nowrap; /* Якщо текст не поміщається, розбивати його на кілька рядків */
+}
+
+header > nav {
     margin-top: 10px;
-  }
-  
+}
+
+#main-header-2 h1 {
+    font-size: 18px; /* Зменшіть шрифт, якщо він занадто великий */
+    word-wrap: break-word; /* Переносить слова, якщо вони занадто довгі */
+}
    
   header nav ul li + li {
     margin-left: 100px;
